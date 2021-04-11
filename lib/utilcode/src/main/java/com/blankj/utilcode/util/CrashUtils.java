@@ -76,15 +76,14 @@ public final class CrashUtils {
      *
      * @param crashDirPath    The directory's path of saving crash information.
      * @param onCrashListener The crash listener.
-     * TODO: The if else loop must have surrounding braces
-     * FIXME: Add surrounding braces to the if else loop
      */
     public static void init(final String crashDirPath, final OnCrashListener onCrashListener) {
         String dirPath;
         if (UtilsBridge.isSpace(crashDirPath)) {
             if (UtilsBridge.isSDCardEnableByEnvironment()
-                    && Utils.getApp().getExternalFilesDir(null) != null)
+                    && Utils.getApp().getExternalFilesDir(null) != null) {
                 dirPath = Utils.getApp().getExternalFilesDir(null) + FILE_SEP + "crash" + FILE_SEP;
+            }
             else {
                 dirPath = Utils.getApp().getFilesDir() + FILE_SEP + "crash" + FILE_SEP;
             }

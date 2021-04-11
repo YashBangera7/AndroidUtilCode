@@ -637,6 +637,10 @@ public final class LogUtils {
         private OnFileOutputListener    mOnFileOutputListener;
         private UtilsBridge.FileHead    mFileHead          = new UtilsBridge.FileHead("Log");
 
+        /**
+         * TODO: Surround if else with braces
+         * FIXME: Surround if else with braces
+         */
         private Config() {
             if (UtilsBridge.isSDCardEnableByEnvironment()
                     && Utils.getApp().getExternalFilesDir(null) != null)

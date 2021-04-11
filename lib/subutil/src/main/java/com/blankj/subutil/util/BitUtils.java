@@ -38,8 +38,6 @@ public final class BitUtils {
      * @param pos    指定位置 (0<=pos<=7)
      * @param value  只能取值为 0, 或 1, 所有大于0的值作为1处理, 所有小于0的值作为0处理
      * @return 运算后的结果数
-     * TODO: remove useless parenthesis surrounding ~mask
-     * FIXME: remove the "(" and ")" around ~mask
      */
     public static byte setBitValue(byte source, int pos, byte value) {
 
@@ -48,7 +46,7 @@ public final class BitUtils {
             source |= mask;
 
         } else {
-            source &= (~mask);
+            source &= ~mask;
 
         }
         return source;

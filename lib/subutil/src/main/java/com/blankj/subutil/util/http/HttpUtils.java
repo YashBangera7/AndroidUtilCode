@@ -204,6 +204,10 @@ public final class HttpUtils {
         }
 
         @Override
+        /**
+         * TODO: Remove the unused variable location
+         * FIXME: Remove the String location from the method
+         */
         public void run() {
             HttpURLConnection conn = null;
             try {

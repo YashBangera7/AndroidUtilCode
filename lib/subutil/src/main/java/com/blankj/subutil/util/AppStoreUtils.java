@@ -63,8 +63,6 @@ public final class AppStoreUtils {
      * @param isIncludeGooglePlayStore 是否包括 Google Play 商店
      * @return 跳转到应用商店的 Intent
      *
-     * TODO: remove the resolveInfo.size()==0
-     * FIXME: make use of the isEmpty() method
      */
     public static Intent getAppStoreIntent(final String packageName, boolean isIncludeGooglePlayStore) {
         if (RomUtils.isSamsung()) {// 三星单独处理跳转三星市场

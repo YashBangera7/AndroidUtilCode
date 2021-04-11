@@ -87,6 +87,8 @@ public final class BitUtils {
      * 入口函数做测试<br>
      *
      * @param args
+     * TODO: Replace all "BitUtils" string by a single String constant
+     * FIXME: Declare constant String and replace in place of Duplicate Literals
      */
     public static void main(String[] args) {
         // 取十进制 11 (二级制 0000 1011) 为例子

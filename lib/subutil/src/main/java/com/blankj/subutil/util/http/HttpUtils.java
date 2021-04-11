@@ -204,10 +204,6 @@ public final class HttpUtils {
         }
 
         @Override
-        /**
-         * TODO: Remove the unused variable location
-         * FIXME: Remove the String location from the method
-         */
         public void run() {
             HttpURLConnection conn = null;
             try {
@@ -218,7 +214,7 @@ public final class HttpUtils {
                     callback.onResponse(new Response(conn.getHeaderFields(), is));
                     is.close();
                 } else if (responseCode == 301 || responseCode == 302) {
-                    String location = conn.getHeaderField("Location");
+
                     call(request, callback);
                 } else {
                     String errorMsg = null;

@@ -76,6 +76,8 @@ public final class CrashUtils {
      *
      * @param crashDirPath    The directory's path of saving crash information.
      * @param onCrashListener The crash listener.
+     * TODO: The if else loop must have surrounding braces
+     * FIXME: Add surrounding braces to the if else loop
      */
     public static void init(final String crashDirPath, final OnCrashListener onCrashListener) {
         String dirPath;

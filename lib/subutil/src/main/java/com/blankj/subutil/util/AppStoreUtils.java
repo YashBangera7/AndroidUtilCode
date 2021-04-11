@@ -80,7 +80,7 @@ public final class AppStoreUtils {
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         List<ResolveInfo> resolveInfos = Utils.getApp().getPackageManager()
                 .queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
-        if (resolveInfos == null || resolveInfos.size() == 0) {
+        if (resolveInfos == null || resolveInfos.isEmpty() ) {
             Log.e(TAG, "No app store!");
             return null;
         }

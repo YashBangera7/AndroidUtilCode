@@ -1139,7 +1139,7 @@ public final class EncryptUtils {
      * @param data The data.
      * @param key  The key.
      * TODO: The variable declaration must be on seperate lines
-     * FIXME: fix int i=0;k;j as int i=0; in one line and declare k and j in next two
+     * FIXME: fix int i=0;k;t as int i=0; in one line and declare k and t in next two
      */
     public static byte[] rc4(byte[] data, byte[] key) {
         if (data == null || data.length == 0 || key == null) return null;

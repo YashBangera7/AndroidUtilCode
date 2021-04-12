@@ -125,10 +125,6 @@ public final class ActivityUtils {
     }
 
     @Nullable
-    /**
-     * TODO: complete empty catch exception block
-     * FIXME: catch exception must be completed
-     */
     private static Activity getActivityFromDecorContext(@Nullable Context context) {
         if (context == null) return null;
         if (context.getClass().getName().equals("com.android.internal.policy.DecorContext")) {

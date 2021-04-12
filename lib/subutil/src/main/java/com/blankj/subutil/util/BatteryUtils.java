@@ -137,10 +137,6 @@ public final class BatteryUtils {
         }
 
         @Override
-        /**
-         * TODO: Remove the declaration of Status(level,status) from being inside the for loop and place it outside
-         * FIXME: Declare new variable outside for loop and use that inside it
-         */
         public void onReceive(Context context, final Intent intent) {
             if (Intent.ACTION_BATTERY_CHANGED.equals(intent.getAction())) {
                 ThreadUtils.runOnUiThread(new Runnable() {
@@ -148,8 +144,9 @@ public final class BatteryUtils {
                     public void run() {
                         int level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
                         int status = intent.getIntExtra(BatteryManager.EXTRA_STATUS, BatteryStatus.UNKNOWN);
+                        Status statusVar = new Status(level, status);
                         for (OnBatteryStatusChangedListener listener : mListeners) {
-                            listener.onBatteryStatusChanged(new Status(level, status));
+                            listener.onBatteryStatusChanged(statusVar);
                         }
                     }
                 });

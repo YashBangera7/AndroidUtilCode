@@ -137,6 +137,10 @@ public final class BatteryUtils {
         }
 
         @Override
+        /**
+         * TODO: Remove the declaration of Status(level,status) from being inside the for loop and place it outside
+         * FIXME: Declare new variable outside for loop and use that inside it
+         */
         public void onReceive(Context context, final Intent intent) {
             if (Intent.ACTION_BATTERY_CHANGED.equals(intent.getAction())) {
                 ThreadUtils.runOnUiThread(new Runnable() {

@@ -1673,6 +1673,10 @@ public class ArrayUtils {
     }
 
     @Nullable
+    /**
+     * TODO: Get rid of Long variable instantiation
+     * FIXME: Remove instantiation and use Long.valueOf() instead.
+     */
     public static Long[] toObject(@Nullable long[] array) {
         if (array == null) {
             return null;

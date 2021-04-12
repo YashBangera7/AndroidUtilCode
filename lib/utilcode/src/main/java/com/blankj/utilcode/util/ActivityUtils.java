@@ -138,6 +138,7 @@ public final class ActivityUtils {
                 //noinspection ConstantConditions,unchecked
                 return ((WeakReference<Activity>) mActivityContextField.get(context)).get();
             } catch (Exception ignore) {
+                return null;
             }
         }
         return null;
